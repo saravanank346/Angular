@@ -7,13 +7,17 @@ import { MyappComponent } from './myapp/myapp.component';
 import { FormsModule } from "@angular/forms";
 import { NewcompComponent } from './newcomp/newcomp.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ServicesComponent } from './services/services.component';
+import { Services1Component } from './services1/services1.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyappComponent,
     NewcompComponent,
-    SidebarComponent
+    SidebarComponent,
+    ServicesComponent,
+    Services1Component
   ],
   imports: [
     BrowserModule,
