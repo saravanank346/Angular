@@ -1,0 +1,114 @@
+<p>myapp works!</p>
+<!-- interpolation -->
+
+<!-- {{app_name}} -->
+{{"title"+property}}
+{{"welcome"+ namess}}
+{{"come"+ frn}}
+
+<input type="text "value="{{app_name}}">
+
+<!-- property binding  enclosed with square brackets-->
+<input type="text "[value]="app_name" [disabled]="is_Disabled">
+
+<!-- event binding enclosed with circle-->
+<button (click)="onClick($event)">Click pannnuga bro</button>
+<button (click)="tempref(my_text.value)">Click pannnuga</button>
+
+<!-- template reference -->
+<input type="text "#my_text [value]="app_name" [disabled]="is_Disabled">
+{{my_text.value}} 
+
+<!-- this all are one way bindings -->
+
+<!-- directives --> 
+
+
+<!-- is show is true goes out of for dom tree -->
+<!-- <p *ngIf="!show">hiii</p>   -->
+<!-- ng-template -->
+<p *ngIf="show; else elseBlock">hiii</p>  
+<ng-template #elseBlock><p>not hii</p></ng-template>
+
+
+<!-- ng for -->
+
+<!-- index-->
+<ul>
+    <li *ngFor="let e of arr;index as i">{{i}},{{e}}</li>
+</ul>
+
+
+<!-- first returns first element true others all false -->
+<ul>
+    <li *ngFor="let e of arr;first as f">{{f}},{{e}}</li>
+</ul>
+
+
+<!-- last returns last element true others all false -->
+<ul>
+    <li *ngFor="let e of arr;last as l">{{l}},{{e}}</li>
+</ul>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+        <th>name</th>
+
+        </tr>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of arr1">
+            <td>{{e.id}}</td>
+            <td>{{e.name}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+        <th>name</th>
+
+        </tr>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of arr1 ;index as i">
+            <td>{{arr1[i]}}</td>
+           
+            
+        </tr>
+    </tbody>
+</table>
+
+<!-- two way data bindings -->
+<!-- uselful in forms -->
+<!-- there are ngclass ,ngstyle -->
+
+<input type="text" [(ngModel)]="text">
+{{text}}
+
+<!-- component interaction  -->
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr let e></tr>
+    </tbody>
+</table>
+
+
+<!-- child to parent -->
+<p>component interaction child to parent</p>
+
+<button (click)="isclick()"> click this</button>
